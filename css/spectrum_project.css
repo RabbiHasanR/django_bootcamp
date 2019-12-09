@@ -1,0 +1,41 @@
+
+h1{
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+.art{
+  margin: auto;
+  border-spacing: 10px;
+}
+
+td{
+  width: 150px;
+  height: 300px;
+}
+
+
+#one{
+  background-color: #50514F;
+}
+#two{
+  background-color: #F25F5C;
+}
+#three{
+  background-color: #FFE066;
+}
+#four{
+  background-color: #247BA0;
+}
+#five{
+  background-color: #70C1B3;
+}
+
+/*
+color code
+#50514F
+#F25F5C
+#FFE066
+#247BA0
+#70C1B3
+*/
