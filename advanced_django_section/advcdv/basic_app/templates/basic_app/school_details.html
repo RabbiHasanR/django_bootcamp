@@ -1,0 +1,25 @@
+{% extends 'basic_app/basic_app_base.html' %}
+{% block body_block %}
+
+<div class="jumbotron">
+  <h1>Welcome to the school details page!</h1>
+  <h2>School Detail:</h2>
+  <p>Name: {{school_detail.name}}</p>
+  <p>Principle: {{school_detail.principle}}</p>
+  <p>Location: {{school_detail.location}}</p>
+
+  <h2>Students:</h2>
+  {% for student in school_detail.students.all %}
+  <p>{{student.name}} who is {{student.age}} years old.</p>
+  {% endfor %}
+</div>
+<div class="container btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group" role="group" aria-label="First group">
+    <p><a class="btn btn-warning" href="{% url 'basic_app:update' pk=school_detail.pk %}">Update</a></p>
+  </div>
+  <div class="btn-group" role="group" aria-label="Second group">
+  <p><a class="btn btn-danger" href="{% url 'basic_app:delete' pk=school_detail.pk %}">Delete</a></p>
+  </div>
+
+</div>
+{% endblock %}
